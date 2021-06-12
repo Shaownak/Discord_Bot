@@ -248,6 +248,15 @@ async def quote(ctx):
 #    time = datetime.datetime.now().strftime('%I:%H %p')
 #    ctx.send(time)
 
+@client.command()
+async def help(ctx):
+  message = "!play - For playing songs\n !pause - For pausing song\n !stop - For stopping song\n !leave - For making the bot leave from the channel\n !quote - For sending quotes\n !Hi - For grettings\n !define topic - For searching the topic in wikipedia"
+  await ctx.send(message)
+
+@client.command()
+async def Hi(ctx):
+  await ctx.send("Hello there!")
+
   
 keep_alive()
 client.run(my_secret)
